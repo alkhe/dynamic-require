@@ -1,3 +1,6 @@
-import 'babel-register';
+import reg from 'babel-register';
 
-export default require;
+export default sourceRoot => {
+	reg({ sourceRoot });
+	return require;
+};
