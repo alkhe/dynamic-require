@@ -2,7 +2,7 @@
   "name": "dynamic-require",
   "version": "6.7.0",
   "description": "Dynamic babel-require.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "mk": "webpack -p --config ./config.babel.js",
     "prepublish": "gulp"
