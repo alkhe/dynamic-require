@@ -1,6 +1,6 @@
 {
   "name": "dynamic-require",
-  "version": "6.7.4",
+  "version": "6.7.5",
   "description": "Dynamic babel-require.",
   "main": "lib/index.js",
   "scripts": {
