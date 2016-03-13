@@ -1,6 +1,8 @@
-import reg from 'babel-register';
+import register from 'babel-register';
+import { join } from 'path';
 
-export default sourceRoot => {
-	reg({ sourceRoot });
-	return require;
+export default (relativePath, options) => {
+	register(options);
+	// require . join relativePath
+	return path => require(join(relativePath, path));
 };
