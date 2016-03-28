@@ -5,6 +5,6 @@ export let plain = (relativePath) =>
 		require(absolute ? path : join(relativePath, path));
 
 export let babel = (relativePath, babelOptions) => {
-	require('babel-register').default(babelOptions);
+	require('babel-register')(babelOptions);
 	return plain(relativePath);
 };
