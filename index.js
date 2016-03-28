@@ -1,8 +1,10 @@
-import register from 'babel-register';
 import { join } from 'path';
 
-export default (relativePath, options) => {
-	register(options);
-	return (path, absolute = false) =>
+export let plain = (relativePath) =>
+	(path, absolute = false) =>
 		require(absolute ? path : join(relativePath, path));
+
+export let babel = (relativePath, babelOptions) => {
+	require('babel-register').default(babelOptions);
+	return plain(relativePath);
 };
